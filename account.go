@@ -20,7 +20,7 @@ func (a *Account) PrivateKey() string {
 	return base58.Encode(a.privateKey)
 }
 
-func Create() (*Account, error) {
+func CreateAccount() (*Account, error) {
 	pubKey, privKey, err := solcrypt.GeneratePair()
 	if err != nil {
 		return nil, err
